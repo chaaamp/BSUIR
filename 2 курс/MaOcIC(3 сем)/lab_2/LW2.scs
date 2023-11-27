@@ -1,0 +1,120 @@
+section_subject_domain_of_cars
+
+    => nrel_main_idtf:
+    [Раздел. Предметная область автомобилей]
+    (* <- lang_ru;;*);
+    [Section. Subject domain of cars]
+    (* <- lang_en;;*);
+
+    <= nrel_section_decomposition:...
+    (*
+        <- sc_node_tuple;;
+        -> section_subject_domain_of_mini_cars
+            (* 
+                <- sc_node_struct;;
+                => nrel_main_idtf: [Раздел. Предметная область мини-автомобилей] (* <- lang_ru;;*);;
+            *);;
+        -> section_subject_domain_of_passenger_cars
+            (*  
+                <-sc_node_struct;; 
+                => nrel_main_idtf: [Раздел. Предметная область  легковых автомобилей] (* <- lang_ru;;*);;
+            *);;
+        -> section_subject_domain_of_trucks
+            (* 
+                <-sc_node_struct;; 
+                => nrel_main_idtf: [Раздел. Предметная область грузовых автомобилей] (* <- lang_ru;;*);;
+            *);;
+        -> section_subject_domain_of_buses
+            (* 
+                <-sc_node_struct;; 
+                => nrel_main_idtf: [Раздел. Предметная область автобусов] (* <- lang_ru;;*);;
+            *);;
+        -> section_subject_domain_of_minivans
+            (* 
+                <-sc_node_struct;;  
+                => nrel_main_idtf: [Раздел. Предметная область минивэнов] (* <- lang_ru;;*);;
+            *);;
+        -> section_subject_domain_of_SUVs
+            (* 
+                <-sc_node_struct;; 
+                => nrel_main_idtf: [Раздел. Предметная область внедорожников] (* <- lang_ru;;*);;
+            *);;
+    *);
+
+    -> rrel_key_sc_element:
+        concept_battery
+            (* => nrel_main_idtf: [Аккамулятор] (* <- lang_ru;;*);; <- sc_node_class;;*);
+        concept_engine
+            (* => nrel_main_idtf: [Двигатель] (* <- lang_ru;;*);; <- sc_node_class;;*);
+        concept_body
+            (* => nrel_main_idtf: [Кузов] (* <- lang_ru;;*);; <- sc_node_class;;*);
+        nrel_exploitation
+            (* => nrel_main_idtf: [Эксплуатация] (* <- lang_ru;;*);;*);
+        nrel_live_improvement
+            (* => nrel_main_idtf: [Улучшение жизни] (* <- lang_ru;;*);;*);
+       
+    <- non_atomic_section;;
+
+section_subject_domain_of_cars
+    = [* 
+        subject_domain_of_cars
+
+            => nrel_main_idtf:
+            [Предметная область автомобилей]
+            (* <- lang_ru;;*);
+            [Subject domain of cars]
+            (* <- lang_en;;*);
+
+            <- subject_domain;
+            <- sc_node_struct;
+
+            => nrel_private_subject_domain:
+                subject_domain_of_mini_cars
+                    (* 
+                        <- sc_node_struct;;
+                        => nrel_main_idtf: [Предметная область мини-автомобилей] (* <- lang_ru;;*);;
+                    *);
+                subject_domain_of_passenger_cars
+                    (* 
+                        <-sc_node_struct;; 
+                        => nrel_main_idtf: [Предметная область легковых автомобилей] (* <- lang_ru;;*);;
+                    *);
+                subject_domain_of_trucks
+                    (* 
+                        <-sc_node_struct;; 
+                        => nrel_main_idtf: [Предметная область грузовых автомобилей] (* <- lang_ru;;*);;
+                    *);    
+                subject_domain_of_buses
+                    (* 
+                        <-sc_node_struct;; 
+                        => nrel_main_idtf: [Предметная область автобусов] (* <- lang_ru;;*);;
+                    *);
+                subject_domain_of_minivans 
+                    (* 
+                        <-sc_node_struct;;  
+                        => nrel_main_idtf: [Предметная область минивэнов] (* <- lang_ru;;*);;
+                    *);
+                subject_domain_of_SUVs
+                    (* 
+                        <-sc_node_struct;; 
+                        => nrel_main_idtf: [Предметная область внедорожников] (* <- lang_ru;;*);;
+                    *);
+                
+
+            <= nrel_private_subject_domain:
+                subject_domain_of_cars;
+
+            -> rrel_maximum_studied_object_class:
+                concept_Machine 
+                    (* => nrel_main_idtf: [Машина] (* <- lang_ru;;*);;*);
+
+            -> rrel_not_maximum_studied_object_class:
+                concept_machine ;
+                concept_engine;
+                concept_body;
+
+            -> rrel_explored_relation:
+                nrel_exploitation;
+                nrel_live_improvement;;
+        
+    *];;

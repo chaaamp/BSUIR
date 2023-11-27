@@ -1,0 +1,50 @@
+cars_set
+      <-sc_node_class;
+      ->concept_machine;;
+
+concept_machine 
+      => nrel_main_idtf:
+      [Машина]
+      (* <- lang_ru;;*);
+      [Machine]
+      (* <- lang_en;;*);;
+
+concept_machine <= nrel_sc_text_translation:...
+      (*
+            <- definition;;
+            -> [ Машина— техническое транспортное средство, используемое для перевозки грузов и пассажиров]
+             (* <- lang_ru;;*);;
+      *);;
+
+concept_machine => nrel_components:...
+  (*
+      <- sc_node_tuple;;
+      -> concept_body;;
+      -> concept_engine;;
+      -> concept_wheels;;
+  *);;
+
+details_set 
+      <- sc_node_class;
+      -> concept_body;;
+      -> concept_engine;;
+      -> concept_wheels;;
+
+concept_machine => nrel_appointment: transportation;;
+logistics_operation_set
+      <- sc_node_class;
+      -> transportation;;
+
+concept_machine => nrel_place_of_invention: Germany;;
+countries_set
+      <- sc_node_class;
+      -> Germany;;
+
+concept_machine => nrel_time_of_first_appearance: XIX_c.;;
+time_period_set
+      <- sc_node_class;
+      -> XIX_c.;; 
+concept_machine => nrel_creator: Karl_Benz;;
+people_set
+      <- sc_node_class;
+      -> Karl_Benz;;

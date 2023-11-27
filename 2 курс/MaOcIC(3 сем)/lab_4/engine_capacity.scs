@@ -1,0 +1,25 @@
+nrel_engine_capacity
+   => nrel_main_idtf: [Объем двигателя*] (* <- lang_ru;; *);;
+
+engine_capacity_4_0
+   => nrel_main_idtf: [4.0 л](*<- lang_ru;;*);
+   -> [4.0];;
+
+engine_capacity_4_4
+   => nrel_main_idtf: [4.4 л](*<- lang_ru;;*);
+   -> [4.4];;
+
+engine_capacity_6_2
+   => nrel_main_idtf: [6.2 л](*<- lang_ru;;*);
+   -> [6.2];;
+
+engine_capacity_2_0
+   => nrel_main_idtf: [2.0 л](*<- lang_ru;;*);
+   -> [2.0];;
+
+engine_capacity_2_5
+   => nrel_main_idtf: [2.5 л](*<- lang_ru;;*);
+   -> [2.5];;
+engine_capacity_90
+   => nrel_main_idtf: [90 кВт](*<- lang_ru;;*);
+   -> [90];;

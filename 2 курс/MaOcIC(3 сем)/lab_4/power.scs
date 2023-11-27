@@ -1,0 +1,22 @@
+
+engine_power_240
+   => nrel_main_idtf: [240 лc](*<- lang_ru;;*);
+   -> [240];;
+   engine_power_625
+   => nrel_main_idtf: [625 лc](*<- lang_ru;;*);
+   -> [625];;
+   engine_power_600
+   => nrel_main_idtf: [600 лc](*<- lang_ru;;*);
+   -> [600];;
+   engine_power_525
+   => nrel_main_idtf: [525 лc](*<- lang_ru;;*);
+   -> [525];;
+   engine_power_300
+   => nrel_main_idtf: [300 лc](*<- lang_ru;;*);
+   -> [300];;
+   engine_power_1034
+   => nrel_main_idtf: [1034 лc](*<- lang_ru;;*);
+   -> [1034];;
+
+nrel_power
+    => nrel_main_idtf: [Мощность*] (* <- lang_ru;; *);;

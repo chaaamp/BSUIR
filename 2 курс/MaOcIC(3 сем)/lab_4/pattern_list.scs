@@ -1,0 +1,25 @@
+lw4_patterns
+    => nrel_main_idtf: [Шаблоны для поиска по БЗ] (* <- lang_ru;; *);
+    -> pattern1;
+    -> pattern2;
+    -> pattern3;
+    -> pattern4;
+    -> pattern5;
+    -> pattern6;
+    -> pattern7;
+    -> pattern8;
+    -> pattern9;
+    -> pattern10;
+    ->pattern11;;
+
+pattern1 => nrel_main_idtf: [Найти объем двигателя для BMW_M5_F90] (* <- lang_ru;; *);;
+pattern2 => nrel_main_idtf: [Найти максимальную скорость для всех автомобилей ] (* <- lang_ru;; *);;
+pattern3 => nrel_main_idtf: [Найти автомобили с объемом двигателя 6.2 л] (* <- lang_ru;; *);;
+pattern4 => nrel_main_idtf: [Найти автомобили с максимальной скоростью 250 км/ч и объемом двигателя 4 л] (* <- lang_ru;; *);;
+pattern5 => nrel_main_idtf: [Найти автомобили ценой 6000000р, а также их киличество лошадиных сил] (* <- lang_ru;; *);;
+pattern6 => nrel_main_idtf: [Найти автомобили с максимальной скоростью  249 км/ч, ценой 6500000р, и объем двигателя 2.5л] (* <- lang_ru;; *);;
+pattern7 => nrel_main_idtf: [Найти автомобили, у которых объем двигателя 4.4 л или 4 л] (* <- lang_ru;; *);;
+pattern8 => nrel_main_idtf: [Найти все автомобили] (* <- lang_ru;; *);;
+pattern9 => nrel_main_idtf: [Найти все автомобили электрокары] (* <- lang_ru;; *);;
+pattern10 => nrel_main_idtf: [Найти все автомобили электрокары  с максимальной скоростью 225 км/ч  и с мощностью двигателя 1034 л.с.] (* <- lang_ru;; *);;
+pattern11 => nrel_main_idtf: [Найти все автомобили электрокары  ценой 8800000р, найти их максимальную скорость] (* <- lang_ru;; *);;

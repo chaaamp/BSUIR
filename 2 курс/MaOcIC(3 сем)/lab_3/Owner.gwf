@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GWF version="2.0">
+    <staticSector>
+        <node type="node/const/perm/relation" idtf="Владелец машины*" shapeColor="0" id="2556133877808" parent="2556134734192" left="0" top="0" right="123" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="2004" y="855.466" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/var/perm/general" idtf="_Машина" shapeColor="0" id="2556133876976" parent="2556134734192" left="0" top="0" right="66" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="2221.37" y="963.792" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/var/perm/general" idtf="_Владелец" shapeColor="0" id="2556133880512" parent="2556134734192" left="0" top="0" right="70" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="1770.37" y="964.792" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/group" idtf="Человек" shapeColor="0" id="2556133877184" parent="2556134734192" left="0" top="0" right="57" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="1771.87" y="838.292" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <pair type="pair/var/-/perm/orient" idtf="" shapeColor="0" id="2556132239072" parent="2556134734192" id_b="2556133876976" id_e="2556133880512" b_x="2221.37" b_y="963.792" e_x="1770.37" e_y="964.792" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/var/pos/perm/orient/membership" idtf="" shapeColor="0" id="2556132238112" parent="2556134734192" id_b="2556133877184" id_e="2556133880512" b_x="1771.87" b_y="838.292" e_x="1770.37" e_y="964.792" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/var/pos/perm/orient/membership" idtf="" shapeColor="0" id="2556132237392" parent="2556134734192" id_b="2556133877808" id_e="2556132239072" b_x="2004" b_y="855.466" e_x="3.0303" e_y="1.81818" dotBBalance="0" dotEBalance="0.487202">
+            <points/>
+        </pair>
+        <contour type="contour/const/perm" idtf="" shapeColor="0" id="2556134734192" parent="0">
+            <points>
+                <point x="1717.87" y="785.292"/>
+                <point x="1716.87" y="1025.29"/>
+                <point x="2324.88" y="1025.29"/>
+                <point x="2325.88" y="782.292"/>
+            </points>
+        </contour>
+        <node type="node/var/perm/general" idtf="_Машина" shapeColor="0" id="2556133875728" parent="2556134732848" left="0" top="0" right="66" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="1693.23" y="256.093" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/var/perm/general" idtf="_Владелец" shapeColor="0" id="2556133880304" parent="2556134732848" left="0" top="0" right="70" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="1607.23" y="232.093" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <contour type="contour/const/perm" idtf="" shapeColor="0" id="2556134732848" parent="0">
+            <points>
+                <point x="1580.65" y="204.515"/>
+                <point x="1787.98" y="205.515"/>
+                <point x="1788.65" y="285.183"/>
+                <point x="1581.98" y="283.183"/>
+            </points>
+        </contour>
+        <node type="node/var/perm/general" idtf="_Машина" shapeColor="0" id="2556133879680" parent="2556130352608" left="0" top="0" right="66" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="2226.73" y="658.593" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/group" idtf="Машина" shapeColor="0" id="2556133874896" parent="2556130352608" left="0" top="0" right="59" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="2227.23" y="533.093" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/var/perm/general" idtf="_Владелец" shapeColor="0" id="2556133874480" parent="2556130352608" left="0" top="0" right="70" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="1775.73" y="659.593" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <pair type="pair/var/-/perm/orient" idtf="" shapeColor="0" id="2556132240032" parent="2556130352608" id_b="2556133874480" id_e="2556133879680" b_x="1775.73" b_y="659.593" e_x="2226.73" e_y="658.593" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/var/pos/perm/orient/membership" idtf="" shapeColor="0" id="2556132240992" parent="2556130352608" id_b="2556133874896" id_e="2556133879680" b_x="2227.23" b_y="533.093" e_x="2226.73" e_y="658.593" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </pair>
+        <contour type="contour/const/perm" idtf="" shapeColor="0" id="2556130352608" parent="0">
+            <points>
+                <point x="1723.23" y="480.094"/>
+                <point x="1722.23" y="720.093"/>
+                <point x="2330.23" y="720.093"/>
+                <point x="2331.23" y="477.094"/>
+            </points>
+        </contour>
+        <node type="node/const/perm/general" idtf="" shapeColor="193" id="2556133873440" parent="0" x="2028.92" y="382.443" haveBus="false" idtf_pos="0">
+            <content type="1" mime_type="content/term" content_visibility="true" file_name=""><![CDATA[Владелец машин - это лицо, которое владеет машинами.]]></content>
+        </node>
+        <node type="node/const/perm/relation" idtf="Имущество*" shapeColor="0" id="2556131353600" parent="0" left="0" top="0" right="86" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="1995.27" y="552.702" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/group" idtf="Машина" shapeColor="0" id="2556134640528" parent="0" left="0" top="0" right="59" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="2219.18" y="841.81" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/group" idtf="Человек" shapeColor="0" id="2556133874272" parent="0" left="0" top="0" right="57" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="1776.14" y="533.093" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/relation" idtf="эквиваленция*" shapeColor="0" id="2556134638656" parent="0" left="0" top="0" right="94" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="1573.23" y="347.094" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/relation" idtf="всеобщность*" shapeColor="0" id="2556134639280" parent="0" left="0" top="0" right="93" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="1276.73" y="165.557" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/group" idtf="Атомарное существование" shapeColor="0" id="2556134637200" parent="0" left="0" top="0" right="171" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="2494.59" y="173.093" haveBus="true" idtf_pos="4">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/tuple" idtf="" shapeColor="0" id="2556131354432" parent="0" x="1573.23" y="439.094" haveBus="true" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/tuple" idtf="" shapeColor="0" id="2556133876352" parent="0" x="1422.09" y="164.557" haveBus="true" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/role" idtf="связываемые переменные'" shapeColor="0" id="2556133873648" parent="0" left="0" top="0" right="161" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="1505.32" y="185.479" haveBus="false" idtf_pos="5">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <pair type="pair/var/pos/perm/orient/membership" idtf="" shapeColor="0" id="2556132238832" parent="0" id_b="2556131353600" id_e="2556132240032" b_x="1995.27" b_y="552.702" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.487202">
+            <points/>
+        </pair>
+        <pair type="pair/var/pos/perm/orient/membership" idtf="" shapeColor="0" id="2556132237152" parent="0" id_b="2556133874272" id_e="2556133874480" b_x="1776.14" b_y="533.093" e_x="1775.73" e_y="659.593" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/var/pos/perm/orient/membership" idtf="" shapeColor="0" id="2556132239552" parent="0" id_b="2556134640528" id_e="2556133876976" b_x="2219.18" b_y="841.81" e_x="2221.37" e_y="963.792" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/const/pos/perm/orient/membership" idtf="" shapeColor="0" id="2556132234512" parent="0" id_b="2556130352224" id_e="2556131354432" b_x="0" b_y="0" e_x="1573.23" e_y="439.094" dotBBalance="0.310236" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/const/pos/perm/orient/membership" idtf="" shapeColor="0" id="2556132240512" parent="0" id_b="2556130351840" id_e="2556134734192" b_x="0" b_y="0" e_x="2021.38" e_y="903.79" dotBBalance="0.852641" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/const/pos/perm/orient/membership" idtf="" shapeColor="0" id="2556132234272" parent="0" id_b="2556133873648" id_e="2556132235952" b_x="1505.32" b_y="185.479" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.51523">
+            <points/>
+        </pair>
+        <pair type="pair/const/pos/perm/orient/membership" idtf="" shapeColor="0" id="2556132234032" parent="0" id_b="2556130352032" id_e="2556130352608" b_x="0" b_y="0" e_x="2026.73" e_y="598.593" dotBBalance="0.258352" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/const/pos/perm/orient/membership" idtf="" shapeColor="0" id="2556132235952" parent="0" id_b="2556130352224" id_e="2556134732848" b_x="0" b_y="0" e_x="1684.65" e_y="244.849" dotBBalance="0.0822112" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/const/pos/perm/orient/membership" idtf="" shapeColor="0" id="2556132239792" parent="0" id_b="2556134639280" id_e="2556133876352" b_x="1276.73" b_y="165.557" e_x="1422.09" e_y="164.557" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/const/pos/perm/orient/membership" idtf="" shapeColor="0" id="2556132237632" parent="0" id_b="2556130351840" id_e="2556130352608" b_x="0" b_y="0" e_x="2026.73" e_y="598.593" dotBBalance="0.490197" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/const/pos/perm/orient/membership" idtf="" shapeColor="0" id="2556132233792" parent="0" id_b="2556134638656" id_e="2556131354432" b_x="1573.23" b_y="347.094" e_x="1573.23" e_y="439.094" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/const/pos/perm/orient/membership" idtf="" shapeColor="0" id="2556132240272" parent="0" id_b="2556130352032" id_e="2556134734192" b_x="0" b_y="0" e_x="2021.38" e_y="903.79" dotBBalance="0.779855" dotEBalance="0">
+            <points/>
+        </pair>
+        <bus type="" idtf="" shapeColor="0" id="2556130352224" parent="0" owner="2556133876352" b_x="1422.03" b_y="174.057" e_x="1417.06" e_y="1031.22">
+            <points/>
+        </bus>
+        <bus type="" idtf="" shapeColor="0" id="2556130351840" parent="0" owner="2556134637200" b_x="2494.51" b_y="182.593" e_x="2487.23" e_y="1024.09">
+            <points/>
+        </bus>
+        <bus type="" idtf="" shapeColor="0" id="2556130352032" parent="0" owner="2556131354432" b_x="1573.29" b_y="448.594" e_x="1577.23" e_y="1030.09">
+            <points/>
+        </bus>
+    </staticSector>
+</GWF>

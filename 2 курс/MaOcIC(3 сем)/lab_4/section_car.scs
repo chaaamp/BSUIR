@@ -1,0 +1,69 @@
+section_cars
+->BMW_M5_F90;
+->AUDI_RS6_C8;
+->M_B_W213;
+->VW_GOLF_GT;
+->SKODA_Octavia_RS;
+
+
+
+BMW_M5_F90
+    => nrel_main_idtf: [BMW_M5_F90] (* <- lang_en;; *);
+    => nrel_engine_capacity:engine_capacity_4_4;
+    => nrel_power: power_625;
+    => nrel_price: price_11500000;
+    => nrel_max_speed:max_speed_305; 
+    <- concept_machine;;
+
+
+   AUDI_RS6_C8
+    => nrel_main_idtf: [AUDI_RS6_C8] (* <- lang_en;; *);
+    => nrel_engine_capacity:engine_capacity_4_0;
+    => nrel_power: power_600;
+    => nrel_price: price_9900000;
+    => nrel_max_speed:max_speed_250; 
+    <- concept_machine;;
+
+
+       M_B_W213
+    => nrel_main_idtf: [M_B_W213] (* <- lang_en;; *);
+    => nrel_engine_capacity:engine_capacity_6_2;
+    => nrel_power: power_525;
+    => nrel_price: price_8800000;
+    => nrel_max_speed:max_speed_265; 
+    <- concept_machine;;
+
+       VW_GOLF_GT
+   => nrel_main_idtf: [ VW_GOLF_GT] (* <- lang_en;; *);
+    => nrel_engine_capacity:engine_capacity_2_0;
+    => nrel_power: power_300;
+    => nrel_price: price_6000000;
+    => nrel_max_speed:max_speed_248; 
+    <- concept_machine;;
+
+    
+
+      SKODA_Octavia_RS
+    => nrel_main_idtf: [SKODA_Octavia_RS] (* <- lang_en;; *);
+    => nrel_engine_capacity:engine_capacity_2_5;
+    => nrel_power: power_240;
+    => nrel_price: price_6500000;
+    => nrel_max_speed:max_speed_249; 
+    <- concept_machine;;
+
+     Tesla Model X
+    => nrel_main_idtf: [Tesla Model X] (* <- lang_en;; *);
+    => nrel_engine_capacity:engine_capacity_90;
+    => nrel_power: power_1034;
+    => nrel_price: price_8800000;
+    => nrel_max_speed:max_speed_225; 
+    <- concept_electric_car;;
+
+
+
+    
+
+
+
+
+    

@@ -1,0 +1,26 @@
+nrel_price
+   => nrel_main_idtf: [цена*] (* <- lang_ru;; *);;
+
+   
+
+price_11500000
+   => nrel_main_idtf: [11.5 млн.р.](*<- lang_ru;;*);
+   -> [11500000];;
+   price_9900000
+   => nrel_main_idtf: [9.9 млн.р.](*<- lang_ru;;*);
+   -> [9900000];;
+
+   price_8800000
+   => nrel_main_idtf: [8.8 млн.р.](*<- lang_ru;;*);
+   -> [8800000];;
+
+price_6000000
+   => nrel_main_idtf: [6 млн.р.](*<- lang_ru;;*);
+   -> [6000000];;
+
+   price_6500000
+   => nrel_main_idtf: [6.5 млн.р.](*<- lang_ru;;*);
+   -> [6500000];;
+   price_8800000
+   => nrel_main_idtf: [8.8 млн.р.](*<- lang_ru;;*);
+   -> [=8800000];;

@@ -1,0 +1,23 @@
+nrel_flash_memory
+   => nrel_main_idtf: [Максимальная скорость*] (* <- lang_ru;; *);;
+
+max_speed_249
+   => nrel_main_idtf: [249 км/ч](*<- lang_ru;;*);
+   -> [249];;
+
+ max_speed_305
+   => nrel_main_idtf: [305 км/ч](*<- lang_ru;;*);
+   -> [305];;
+
+  max_speed_250
+   => nrel_main_idtf: [249 км/ч](*<- lang_ru;;*);
+   -> [250];;
+   max_speed_265
+   => nrel_main_idtf: [265 км/ч](*<- lang_ru;;*);
+   -> [265];;
+   max_speed_248
+   => nrel_main_idtf: [248 км/ч](*<- lang_ru;;*);
+   -> [248];;
+   max_speed_225
+   => nrel_main_idtf: [225 км/ч](*<- lang_ru;;*);
+   -> [225];;

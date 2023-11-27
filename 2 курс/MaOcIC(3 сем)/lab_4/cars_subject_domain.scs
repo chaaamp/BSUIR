@@ -1,0 +1,150 @@
+section_subject_domain_of_cars
+ => nrel_main_idtf:
+    [Раздел. Предметная область автомобилей]
+    (* <- lang_ru;;*);
+    [Section. Subject domain of cars]
+    (* <- lang_en;;*);
+
+<= nrel_section_decomposition:
+{
+section_mini_cars;
+section_passenger_cars;
+section_trucks;
+section_buses;
+section_minivans
+};
+
+	-> rrel_key_sc_element:
+		concept_battery;
+		concept_engine;
+        concept_body;
+        concept_wheels;
+		lw4_patterns;
+
+        <- non_atomic_section;;
+
+
+section_mini_cars
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Раздел. Мини-автомобили] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Section. Mini_cars] (* <- lang_en;; *);;
+
+
+section_passenger_cars
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Раздел. Легковые автомобили] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Section. Passenger_cars] (* <- lang_en;; *);;
+
+    section_trucks
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Раздел. Грузовые автомобили ] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Section. Trucks] (* <- lang_en;; *);;
+
+    section_buses
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Раздел. Автобусы] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Section. Buses] (* <- lang_en;; *);;
+
+    section_minivans
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Раздел. Минивэны] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Section. Minivans] (* <- lang_en;; *);;
+
+
+    section_subject_domain_of_cars= [*
+
+	subject_domain_of_cars
+		<- sc_node_not_relation;
+		=> nrel_main_idtf: [Предметная область автомобилей] (* <- lang_ru;; *);
+    	=> nrel_main_idtf: [Subject domain of cars] (* <- lang_en;; *);
+
+		-> rrel_maximum_studied_object_class:
+                concept_car;
+
+		<- rrel_not_maximum_studied_object_class:
+                concept_engine;
+                concept_battery;
+                concept_wheels;
+            
+		-> rrel_studied_relation:
+			nrel_country_of_origin;
+
+		=> nrel_private_subject_domain:
+			subject_domain_of_mini_cars;
+			subject_domain_of_passenger_cars;
+			subject_domain_of_trucks;
+			subject_domain_of_buses;
+            subject_domain_of_minivans;
+
+		<- subject_domain;;
+
+*];;
+
+
+subject_domain_of_mini_cars
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Предметная область мини-автомобилей] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Subject domain of Mini_cars] (* <- lang_en;; *);;
+
+subject_domain_of_passenger_cars
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Предметная область легковых автомобилей] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Subject domain of Passenger_cars] (* <- lang_en;; *);;
+
+subject_domain_of_thucks
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Предметная область грузовых автомобилей] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Subject domain of Trucks] (* <- lang_en;; *);;
+
+subject_domain_of_buses
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Предметная область автобусов] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Subject domain of Buses] (* <- lang_en;; *);;
+
+    subject_domain_of_minivans
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Предметная область минивэнов] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [Subject domain of Minivans] (* <- lang_en;; *);;
+
+		
+concept_engine
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [двигатель] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [engine] (* <- lang_en;; *);;
+
+concept_battery
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [аккумулятор] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [battery] (* <- lang_en;; *);;
+
+concept_body
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [кузов] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [body] (* <- lang_en;; *);;
+
+concept_wheels
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [колеса] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [wheels] (* <- lang_en;; *);;
+
+    concept_rudder
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Руль] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [rudder] (* <- lang_en;; *);;
+
+concept_machine
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Машина] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [machine] (* <- lang_en;; *);;
+concept_electric_car
+	<- sc_node_not_relation;
+	=> nrel_main_idtf: [Электрокар] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [electric_car] (* <- lang_en;; *);;
+
+
+
+nrel_country_of_origin
+	<- sc_node_norole_relation;
+	=> nrel_main_idtf: [страна производства*] (* <- lang_ru;; *);
+	=> nrel_main_idtf: [country of origin*] (* <- lang_en;; *);;
+    
