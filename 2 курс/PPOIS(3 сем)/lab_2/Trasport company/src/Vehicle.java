@@ -1,11 +1,20 @@
+// Vehicle class
 class Vehicle {
-    String model;
-    int year;
     String licensePlate;
+    String model;
 
-    public Vehicle(String model, int year, String licensePlate) {
-        this.model = model;
-        this.year = year;
+    public Vehicle(String licensePlate, String model) {
         this.licensePlate = licensePlate;
+        this.model = model;
+    }
+
+    public String getLicensePlate() {
+
+        return licensePlate;
+    }
+
+    public String getModel() {
+
+        return model;
     }
 }

@@ -1,81 +1,124 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Класс TaxiAggregator представляет собой агрегатор такси с основными функциональностями.
+ */
 class TaxiAggregator {
+    // Список доступных водителей
     private List<Driver> availableDrivers;
+
+    // Список забронированных поездок
     private List<Booking> bookings;
 
+    /*
+     * Конструктор для создания объекта TaxiAggregator с пустыми списками водителей и поездок.
+     */
     public TaxiAggregator() {
         this.availableDrivers = new ArrayList<>();
         this.bookings = new ArrayList<>();
     }
 
-    // Регистрация нового водителя в системе
-    public void registerDriver(Driver driver) {
+    /*
+     * Метод для добавления нового водителя в список доступных.
+       Водитель для добавления.
+     */
+    public void addDriver(Driver driver) {
         availableDrivers.add(driver);
     }
 
-    // Поиск доступного водителя для заказа
-    public Driver findAvailableDriver(Location userLocation) {
-        for (Driver driver : availableDrivers) {
-            if (driver.isAvailable) {
-                // Просто для примера: простейшая логика поиска ближайшего водителя
-                double distance = calculateDistance(driverLocation, userLocation);
-                if (distance < MAX_DISTANCE) {
-                    return driver;
-                }
-            }
-        }
-        return null; // Нет доступных водителей
+    /**
+     * Метод для получения списка доступных водителей
+     * Список доступных водителей.
+     */
+    public List<Driver> getAvailableDrivers() {
+        return availableDrivers;
     }
 
-    // Создание нового заказа
+    /*
+     * Метод для поиска доступного водителя.
+     * Первый доступный водитель или null, если нет доступных водителей.
+     */
+    public Driver findAvailableDriver() {
+        for (Driver driver : availableDrivers) {
+            if (driver.isAvailable) {
+                return driver;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Метод для создания новой поездки
+     * Пользователь, заказавший поездку.
+     * Начальное местоположение поездки.
+     * Конечное местоположение поездки.
+     * Объект Booking, представляющий созданную поездку, или null, если нет доступных водителей.
+     */
     public Booking createBooking(User user, Location startLocation, Location endLocation) {
-        // Поиск доступного водителя
-        Driver availableDriver = findAvailableDriver(startLocation);
-
-        if (availableDriver != null) {
-            // Создание заказа
+        Driver driver = findAvailableDriver();
+        if (driver != null) {
             RideRequest rideRequest = new RideRequest(user, startLocation, endLocation);
-            Ride ride = new Ride(startLocation, endLocation, calculateRideCost(startLocation, endLocation), getCurrentDateTime());
+            Ride ride = new Ride(startLocation, endLocation, calculateCost(startLocation, endLocation), "Now");
             Payment payment = new Payment("Credit Card", ride.getCost());
+            Booking booking = new Booking(rideRequest, driver, ride, payment);
 
-            // Обновление статуса водителя
-            availableDriver.isAvailable = false;
+            // Обновляем статус водителя
+            driver.isAvailable = false;
 
-            // Создание бронирования
-            Booking booking = new Booking(rideRequest, availableDriver, ride, payment);
-
-            // Добавление заказа в список бронирований
+            // Добавляем заказ в список
             bookings.add(booking);
 
             return booking;
         } else {
-            return null; // Нет доступных водителей
+            System.out.println("Извините, в данный момент нет доступных водителей.");
+            return null;
         }
     }
 
-    // Завершение поездки и освобождение водителя
-    public void completeRide(Booking booking) {
+    /**
+     * Метод для расчета стоимости поездки на основе расстояния.
+     * <p>
+     * Начальное местоположение поездки.
+     * Конечное местоположение поездки.
+     * Стоимость поездки.
+     */
+    protected double calculateCost(Location startLocation, Location endLocation) {
+        // Пример: расчет стоимости на основе расстояния (просто для иллюстрации)
+        double distance = calculateDistance(startLocation, endLocation);
+
+        // Предположим, что стоимость составляет 0.5р за километр
+        double costPerKilometer = 0.5;
+
+        return distance * costPerKilometer;
+    }
+
+    /*
+     * Метод для расчета расстояния между двумя точками.
+     * Начальное местоположение.
+     * Конечное местоположение.
+     * Расстояние между точками.
+     */
+    protected double calculateDistance(Location startLocation, Location endLocation) {
+        // Пример: расчет расстояния между двумя точками (просто для иллюстрации)
+        // Здесь вы можете использовать различные алгоритмы для расчета реального расстояния
+
+        // В данном случае, просто считаем Евклидово расстояние
+        double deltaX = endLocation.latitude - startLocation.latitude;
+        double deltaY = endLocation.longitude - startLocation.longitude;
+
+        return Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+    }
+
+    /*
+     * Метод для завершения поездки
+     * Завершаемая поездка.
+     */
+    public void completeBooking(Booking booking) {
+        // Завершаем заказ
+        booking.getPayment().isPaid = true;
         booking.getAssignedDriver().isAvailable = true;
-        booking.getPayment().setPaid(true);
+        System.out.println("Поездка завершена. Спасибо за использование нашего сервиса!");
     }
 
-    // Пример метода для расчета расстояния между двумя местоположениями
-    private double calculateDistance(Location location1, Location location2) {
-        // Реализация расчета расстояния (может потребоваться использование сторонней библиотеки)
-        return 0.0;
-    }
-
-    // Пример метода для расчета стоимости поездки
-    private double calculateRideCost(Location startLocation, Location endLocation) {
-        // Реализация расчета стоимости (может зависеть от различных факторов)
-        return 20.0; // Пример стоимости
-    }
-
-    // Пример метода для получения текущей даты и времени
-    private String getCurrentDateTime() {
-        // Реализация получения текущей даты и времени
-        return "2023-11-20 12:00:00"; // Пример
-    }
 }
