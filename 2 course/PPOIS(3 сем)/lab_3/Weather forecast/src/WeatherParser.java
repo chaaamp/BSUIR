@@ -5,7 +5,7 @@ import java.util.Date;
  * Класс WeatherParser отвечает за парсинг данных о погоде из JSON-формата.
  */
 public class WeatherParser {
-
+    private static final double kelvin_celsius_conversion = 273.15;
     /**
      * Метод parseWeatherData выполняет парсинг данных о погоде из JSON-строки.
      *
@@ -20,7 +20,7 @@ public class WeatherParser {
             // Извлечение данных из JSON
             String city = json.getString("name");
             double temperatureKelvin = json.getJSONObject("main").getDouble("temp");
-            double temperatureCelsius = temperatureKelvin - 273; // Перевод температуры в градусы Цельсия
+            double temperatureCelsius = temperatureKelvin - kelvin_celsius_conversion; // Перевод температуры в градусы Цельсия
             String conditions = json.getJSONArray("weather").getJSONObject(0).getString("description");
 
             // Получение текущей даты

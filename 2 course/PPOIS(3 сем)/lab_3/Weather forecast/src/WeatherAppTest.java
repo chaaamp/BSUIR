@@ -4,6 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -54,7 +55,7 @@ public class WeatherAppTest {
         // Проверка, что получены корректные данные
         assertNotNull(weatherData);
         assertEquals("TestCity", weatherData.getCity());
-        assertEquals(0, weatherData.getTemperature(), 0.01);
+        assertEquals(-0.14, weatherData.getTemperature(), 0.01);
         assertEquals("Clear Sky", weatherData.getConditions());
         assertNotNull(weatherData.getDate());
     }
@@ -108,7 +109,7 @@ public class WeatherAppTest {
         weatherForecast.addWeatherData(weatherData2);
 
         // Получение ежедневного прогноза
-        var dailyForecast = weatherForecast.getDailyForecast();
+        List<WeatherData> dailyForecast = weatherForecast.getDailyForecast();
 
         // Проверка, что прогноз содержит ожидаемые объекты WeatherData
         assertNotNull(dailyForecast);
