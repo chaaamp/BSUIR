@@ -1,4 +1,4 @@
-class Phone implements Comparable<Phone> {
+public class Phone implements Comparable<Phone> {
     private String model;
     private String brand;
     private int year;
@@ -23,7 +23,13 @@ class Phone implements Comparable<Phone> {
 
     @Override
     public int compareTo(Phone anotherPhone) {
-        return year - anotherPhone.getYear();
+        // Проверяем на null
+        if (anotherPhone == null) {
+            return 1;
+        }
+
+        // Сравниваем по году
+        return Integer.compare(year, anotherPhone.getYear());
     }
 
     @Override
